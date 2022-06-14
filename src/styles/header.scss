@@ -1,0 +1,176 @@
+.header__wrapper {
+  padding: 0 130px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  width: calc(100% - 260px);
+  background: var(--white-color);
+  z-index: 3;
+}
+
+.side-buttons__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.side-buttons__wrapper img {
+  width: 24px;
+  height: 24px;
+}
+
+.side-buttons__wrapper a:not(.header-menu__link) {
+  margin-left: 10px;
+}
+
+.header-menu__link {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 15px;
+  margin-left: 30px;
+  transition: all 0.5s;
+}
+
+p.header-menu__link {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header-menu__link.selected {
+  text-decoration: line-through;
+}
+
+.header-menu__link:first-child {
+  margin-left: 0;
+}
+
+.header-menu__link:hover {
+  opacity: 0.6;
+}
+
+.header-menu__link:active {
+  opacity: 0.8;
+}
+
+.header-menu__open-button {
+  cursor: pointer;
+  background: url(../../assets/burger-button.svg);
+  width: 24px;
+  height: 24px;
+  transition: all 0.5s;
+  display: none;
+}
+
+.header-menu__open-button:hover {
+  opacity: 0.5;
+}
+
+.header-menu__wrapper-mobile.closed {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.header-menu__wrapper-mobile {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s;
+  padding: 0 20px;
+  width: calc(100vw - 40px);
+  height: 100vh;
+}
+
+.header-menu__wrapper-mobile .header-menu__link {
+  margin-left: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.header-menu__close-button-wrapper {
+  height: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-menu__close-button {
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.header-menu__close-button:hover {
+  opacity: 0.5;
+}
+
+.lang {
+  width: 35px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
+  .header__wrapper {
+    padding: 0 40px;
+    width: calc(100% - 80px);
+  }
+
+  .header-menu__wrapper {
+    display: none;
+    visibility: hidden;
+  }
+
+  .header-menu__open-button {
+    display: flex;
+  }
+
+  .header-menu__wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    background: #ffffff;
+    width: calc(50vw - 40px);
+  }
+}
+
+.header-menu__link.pc {
+  display: inline-block;
+  width: 90px;
+}
+
+@media only screen and (max-width: 799px) {
+  .header__wrapper {
+    padding: 0 20px;
+    width: calc(100% - 40px);
+  }
+
+  .header-menu__wrapper {
+    display: none;
+    visibility: hidden;
+  }
+
+  .header-menu__open-button {
+    display: flex;
+  }
+
+  .header-menu__wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    background: #ffffff;
+  }
+
+  .footer__big-love {
+    display: none;
+  }
+}

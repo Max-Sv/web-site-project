@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  white-space: pre-line;
+}
+
+body {
+  /*padding-top: 60px;*/
+  padding-bottom: 60px;
+  background: var(--main-white-color);
+  font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  src: url("../../assets/fonts/Montserrat-Bold.ttf");
+  src: url("../../assets/fonts/Montserrat-Medium.ttf");
+  src: url("../../assets/fonts/Montserrat-Regular.ttf");
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+}
+
+span.w500,
+p.w500 {
+  font-weight: 500;
+}
+span.w400,
+p.w400 {
+  font-weight: 400;
+}
+span.w700,
+p.w700 {
+  font-weight: 700;
+}
+
+:root {
+  --main-white-color: #ffffff;
+  --main-black-color: #141414;
+  --black-color: #141414;
+  --white-color: #ffffff;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: auto 130px;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
+  .wrapper {
+    margin: auto 40px;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .wrapper {
+    margin: auto 20px;
+  }
+}
+
+.logo {
+  margin: 0 auto;
+}
+.theme {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+
+  .side {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    .arrow {
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover {
+      .arrow {
+        transform: scale(2.1);
+      }
+    }
+  }
+
+  .dark {
+    background-color: var(--black-color);
+    align-items: flex-end;
+  }
+  .white {
+    background-color: var(--white-color);
+    align-items: flex-start;
+  }
+
+  .theme-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "menu": {
+    "home": "Home",
+    "artworks": "Artworks",
+    "biography": "Biography",
+    "exhibitions": "Exhibitions",
+    "color": "Dark side"
+  },
+  "biography": {
+    "year": "2021",
+    "title": "Victoria Yakusheva",
+    "text": "Ykshv is a contemporary artist who creates multidisciplinary works that combine art and scientific approach.\n\nThe artist attracts the viewer's attention by awakening primal desires, appealing to sexuality through tactile sensations. Symbolism can be traced in the works. Sculptures are created from unconventional materials. Vivid works of unimaginable form draw into their space, possessing the pulsation, the energy of a living being.\n\nSculptures are made of materials that create a 'mirror' effect, reflect objects around them and change their appearance depending on the place where they are installed.\n\nYkshv offers its own vision of the world and the role of art in it - alluring, cosmic, complex."
+  },
+  "artworks": [
+    {
+      "id": 1,
+      "bigImg": "kiss_main.jpeg",
+      "smImage": "",
+      "sliderImages": [{ "url": "kiss_1.jpeg" }, { "url": "kiss_2.jpeg" }, { "url": "kiss_3.jpeg" }],
+      "title": "Kisses",
+      "year": "2019",
+      "subTitle": "Composite materials, metal",
+      "text": ""
+    },
+    {
+      "id": 2,
+      "bigImg": "evolution_main.jpeg",
+      "smImage": "",
+      "sliderImages": [{ "url": "evolution_1.jpeg" }, { "url": "evolution_2.jpeg" }, { "url": "evolution_3.jpeg" }],
+      "title": "Evolution",
+      "year": "2019",
+      "subTitle": "Composite materials, metal",
+      "text": ""
+    },
+    {
+      "id": 3,
+      "bigImg": "horizon_main.jpg",
+      "smImage": "",
+      "sliderImages": [{ "url": "horizon_1.jpg" }, { "url": "horizon_2.jpg" }, { "url": "horizon_3.jpg" }],
+      "title": "Event Horizon",
+      "year": "2020",
+      "subTitle": "Composite materials, metal",
+      "text": "According to Einstein's theory of relativity, nothing can move faster than the speed of light, so there is a certain area that nothing can leave. This space is not flat: it is deformed, curved by the substance and energy in it. This area is called a black hole, and its boundary is the event horizon. This horizon is created by light that is unable to leave the black hole and therefore 'hovers' on this horizon."
+    },
+    {
+      "id": 4,
+      "bigImg": "personality_main.jpg",
+      "smImage": "",
+      "sliderImages": [
+        { "url": "personality_1.jpg" },
+        { "url": "personality_2.jpg" },
+        { "url": "personality_3.jpg" },
+        { "url": "personality_4.jpg" }
+      ],
+      "title": "Personality",
+      "year": "2021",
+      "subTitle": "Metal",
+      "text": ""
+    },
+    {
+      "id": 5,
+      "bigImg": "coral_main.jpg",
+      "smImage": "",
+      "sliderImages": [{ "url": "coral_1.jpg" }, { "url": "coral_2.jpg" }],
+      "title": "Coral",
+      "year": "2021",
+      "subTitle": "Composite materials, metal",
+      "text": ""
+    },
+    {
+      "id": 6,
+      "bigImg": "pearl_main.jpg",
+      "smImage": "",
+      "sliderImages": [
+        { "url": "pearl_1.jpg" },
+        { "url": "pearl_2.jpg" },
+        { "url": "pearl_3.jpg" },
+        { "url": "pearl_4.jpg" }
+      ],
+      "title": "Cosmic Pearl",
+      "year": "2021",
+      "subTitle": "Composite materials, metal",
+      "text": "Panspermia is a hypothesis about the possibility of transferring microscopic life-forms through the Universe. The consequence of this hypothesis is the assumption of the origin of life on Earth as a result of its introduction from Universe with the help of natural objects, namely, according to my assumptions, cosmic pearls."
+    }
+  ],
+  "exhibitions": [
+    {
+      "id": 1,
+      "name": "Exhibition 'Consciousness' in the project «Vsekhovannye»",
+      "date": "September 16-30",
+      "year": "2018",
+      "gallery": "Ок16",
+      "location": "Minsk - Belarus",
+      "text": "Rassegna Internazionale D’arte PREMIO LIGURES città di Lerici",
+      "artworkName": "Synesthesia, Schizophrenia, Dementia, Stendhal syndrome"
+    },
+    {
+      "id": 2,
+      "name": "Exhibition «Rassegna Internazionale D’arte PREMIO LIGURES città di Lerici»",
+      "date": "March 16-31",
+      "year": "2019",
+      "gallery": "Verum",
+      "location": "Lerici - Italy",
+      "text": "Rassegna Internazionale D’arte PREMIO LIGURES città di Lerici",
+      "artworkName": "Kisses"
+    },
+    {
+      "id": 3,
+      "name": "Exhibition «Rassegna Internazionale D’arte PREMIO città di Montecosaro»",
+      "date": "June 30 - July 20",
+      "year": "2019",
+      "gallery": "Verum",
+      "location": "Montecosaro - Italy",
+      "text": "Rassegna Internazionale D’arte PREMIO città di Montecosaro",
+      "artworkName": "Kisses"
+    },
+    {
+      "id": 4,
+      "name": "Exhibition «Arte Venezia»",
+      "date": "September 21-29",
+      "year": "2019",
+      "gallery": "Verum",
+      "location": "Venice - Italy",
+      "text": "Arte Venezia",
+      "artworkName": "Kisses"
+    },
+    {
+      "id": 5,
+      "name": "Exhibition «Osenniy salon with Belgazprombank-2019»",
+      "date": "October 18 - November 3",
+      "year": "2019",
+      "gallery": "NCI, Belgazprombank",
+      "location": "Minsk - Belarus",
+      "text": "Osenniy salon with Belgazprombank-2019",
+      "artworkName": "Evolution"
+    },
+    {
+      "id": 6,
+      "name": "Exhibition «Centro d’Arte e Cultura Verum»",
+      "date": "December 2019 - January 2020",
+      "year": "",
+      "gallery": "Verum",
+      "location": "Civitanova Marche - Italy",
+      "text": "Centro d’Arte e Cultura Verum",
+      "artworkName": "Kisses"
+    },
+    {
+      "id": 7,
+      "name": "Exhibition «ARTE EXPO BRATISLAVA»",
+      "date": "June 24  - August 9",
+      "year": "2020",
+      "gallery": "Verum and Bratislava Art Gallery and the Marche Palette",
+      "location": "Bratislava - Slovakia",
+      "text": "ARTE EXPO BRATISLAVA",
+      "artworkName": "Kisses"
+    }
+  ]
+}
