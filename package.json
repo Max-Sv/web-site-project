@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "homepage": "https://max-sv.github.io/web-site-project/",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-    "build:dev": "cross-env NODE_ENV=development webpack --config config/webpack.dev.js",
     "lint": "eslint . src config || true"
   },
   "keywords": [],
@@ -53,11 +51,6 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "eslint-config-react-app": "^6.0.0",
-    "gh-pages": "^4.0.0",
-    "i18next": "^21.2.4",
-    "react-cookie": "^4.1.1",
-    "react-i18next": "^11.12.0",
-    "react-slick": "^0.28.1"
+    "eslint-config-react-app": "^6.0.0"
   }
 }

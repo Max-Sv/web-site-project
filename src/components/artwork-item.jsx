@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 export const ArtworkItem = ({ item }) => {
-  const { title, year, bigImg, id, text, subTitle } = item;
+  const { link, title, year, description, img } = item;
   const titleRef = React.useRef(null);
   const descriptionRef = React.useRef(null);
   const layoutRef = React.useRef(null);
@@ -20,21 +20,21 @@ export const ArtworkItem = ({ item }) => {
   };
 
   return (
-    <Link to={{ pathname: `/artwork/${id}` }} className="artworks-item__link">
+    <Link to={{ pathname: `/hello/${link}` }} className="artworks-item__link">
       <div className="artworks-item__wrapper" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-        <img className="artworks-item__image" src={`../../assets/${bigImg}`} alt={title} />
+        <img className="artworks-item__image" src={`../../assets/${img}`} alt={title} />
         <div className="artworks-item__image-layout hidden" ref={layoutRef}>
           <div className="artworks-item__image-layout-wrapper">
             <div className="artworks-item__image-layout-title">{title}</div>
-            <div className="artworks-item__image-layout-subtitle">{subTitle}</div>
-            <div className="artworks-item__image-layout-description">{text}</div>
+            <div className="artworks-item__image-layout-subtitle">{year}</div>
+            <div className="artworks-item__image-layout-description">{description}</div>
           </div>
         </div>
         <div className="artworks-item__title" ref={titleRef}>
           <span>{title}</span>
         </div>
         <div className="artworks-item__description" ref={descriptionRef}>
-          <span>{year}</span>
+          <span>Description</span>
         </div>
       </div>
     </Link>

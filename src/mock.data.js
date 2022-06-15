@@ -116,26 +116,12 @@ export const biographyItems = [
 export const exhibitionItems = [
   {
     id: 1,
-    bigImg: "kiss_main.jpeg",
-    smImage: "",
-    sliderImages: [
-      { url: "../../assets/kiss/kiss_1.jpeg" },
-      { url: "../../assets/kiss/kiss_2.jpeg" },
-      { url: "../../assets/kiss/kiss_3.jpeg" },
-    ],
-    title: "«Kisses»",
-    year: "2019",
-    subTitle: "Composite materials, metal",
-    text: "",
+    year: 2020,
+    date: "JUNE 24 - AUGUST 9",
+    name: "VERUM",
+    place: "BRATISLAVA ART GALLERY AND THE MARCHE PALETTE",
+    text: "According to Einstein's theory of relativity, nothing can move faster than the speed of light, so there is a certain area that nothing can leave. This space is not flat: it is deformed, curved by the substance and energy in it.</br> This area is called a black hole, and its boundary is the event horizon. This horizon is created by light that is unable to leave the black hole and therefore 'hovers' on this horizon.",
   },
-  // {
-  //   id: 1,
-  //   year: 2020,
-  //   date: "JUNE 24 - AUGUST 9",
-  //   name: "VERUM",
-  //   place: "BRATISLAVA ART GALLERY AND THE MARCHE PALETTE",
-  //   text: "According to Einstein's theory of relativity, nothing can move faster than the speed of light, so there is a certain area that nothing can leave. This space is not flat: it is deformed, curved by the substance and energy in it.</br> This area is called a black hole, and its boundary is the event horizon. This horizon is created by light that is unable to leave the black hole and therefore 'hovers' on this horizon.",
-  // },
   {
     id: 2,
     year: 2020,
@@ -177,13 +163,3 @@ export const exhibitionItems = [
     text: "Exhibition 'Consciousness' in the project 'Vsekhovannye' (Sculptures: Synesthesia, Schizophrenia, Dementia, Stendhal syndrome)",
   },
 ];
-
-export const getArtworkById = id => {
-  const test = artworkItems.find(item => {
-    console.log("id:", id);
-    console.log("item:", item);
-    return item.id === Number(id);
-  });
-  console.log("test:", test);
-  return test;
-};

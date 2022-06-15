@@ -10,7 +10,7 @@
   align-items: center;
   width: calc(100% - 260px);
   background: var(--white-color);
-  z-index: 3;
+  z-index: 100;
 }
 
 .side-buttons__wrapper {
@@ -114,11 +114,6 @@ p.header-menu__link {
   opacity: 0.5;
 }
 
-.lang {
-  width: 35px;
-  text-align: center;
-}
-
 @media only screen and (min-width: 800px) and (max-width: 1199px) {
   .header__wrapper {
     padding: 0 40px;
@@ -141,11 +136,6 @@ p.header-menu__link {
     background: #ffffff;
     width: calc(50vw - 40px);
   }
-}
-
-.header-menu__link.pc {
-  display: inline-block;
-  width: 90px;
 }
 
 @media only screen and (max-width: 799px) {

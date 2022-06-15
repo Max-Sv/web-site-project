@@ -1,8 +1,6 @@
 import "../styles/header.scss";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { useCookies } from "react-cookie";
 import { Logo } from "../common/logo";
 import { Footer } from "./footer";
 
@@ -13,22 +11,12 @@ const theme = {
   mainDarkColor: "--main-black-color",
 };
 
-const lang = {
-  en: "EN",
-  ru: "RUS",
-};
-
 export const Header = () => {
-  const { t, i18n } = useTranslation("common");
-  const [cookies, setCookie] = useCookies();
   const [isDark, setDark] = React.useState(false);
   const [buttonTitle, setButtonTitle] = React.useState("White side");
   const [isMobileMenuOpened, setMobileMenuOpened] = React.useState(false);
   const mobileMenu = React.useRef(null);
-  const [themeDashboard, setThemeDashboard] = React.useState(
-    !cookies.theme ? { state: true, color: "white" } : cookies.theme,
-  );
-  const [language, setLanguage] = React.useState(lang.ru);
+  const [themeDashboard, setThemeDashboard] = React.useState({ state: true, color: "white" });
 
   // const whiteVersion = document.querySelector(".entry__white");
   // const darkVersion = document.querySelector(".entry__dark");
@@ -52,7 +40,6 @@ darkVersion.addEventListener('click', () => {
     setButtonTitle(isDark ? "White side" : "Dark side");
     document.documentElement.style.setProperty(theme.mainWhiteColor, isDark ? theme.darkColor : theme.whiteColor);
     document.documentElement.style.setProperty(theme.mainDarkColor, isDark ? theme.whiteColor : theme.darkColor);
-    setCookie("theme", themeDashboard);
   }, [isDark]);
 
   React.useEffect(() => {
@@ -73,14 +60,6 @@ darkVersion.addEventListener('click', () => {
     }
     // document.body.classList.remove("no-scroll");
   }, [themeDashboard]);
-
-  React.useEffect(() => {
-    if (language === lang.en) {
-      i18n.changeLanguage(lang.ru.toLocaleLowerCase());
-    } else {
-      i18n.changeLanguage(lang.en.toLocaleLowerCase());
-    }
-  }, [language]);
 
   return (
     <>
@@ -107,19 +86,19 @@ darkVersion.addEventListener('click', () => {
       ) : null}
       <div className="header__wrapper">
         <div className="header-menu__wrapper">
-          <NavLink to="/" className="header-menu__link  pc" activeClassName="selected" exact="true">
-            {t("menu.home")}
-          </NavLink>
-          <NavLink to="/artworks" className="header-menu__link pc" activeClassName="selected" exact="true">
-            {t("menu.artworks")}
-          </NavLink>
-          <NavLink to="/biography" className="header-menu__link pc" activeClassName="selected" exact="true">
-            {t("menu.biography")}
-          </NavLink>
-          <NavLink to="/exhibitions" className="header-menu__link pc" activeClassName="selected" exact="true">
-            {t("menu.exhibitions")}
-          </NavLink>
-          <p onClick={() => setDark(!isDark)} className="header-menu__link change-side-button pc">
+          <Link to="/" className="header-menu__link selected">
+            Home
+          </Link>
+          <Link to="/artworks" className="header-menu__link">
+            Artworks
+          </Link>
+          <Link to="/biography" className="header-menu__link">
+            Biography
+          </Link>
+          <Link to="/exhibitions" className="header-menu__link">
+            Exhibitions
+          </Link>
+          <p onClick={() => setDark(!isDark)} className="header-menu__link change-side-button">
             {buttonTitle}
           </p>
         </div>
@@ -137,18 +116,18 @@ darkVersion.addEventListener('click', () => {
               </svg>
             </div>
           </div>
-          <NavLink to="/" className="header-menu__link" activeClassName="selected" exact="true">
-            {t("menu.home")}
-          </NavLink>
-          <NavLink to="/artworks" className="header-menu__link" activeClassName="selected" exact="true">
-            {t("menu.artworks")}
-          </NavLink>
-          <NavLink to="/biography" className="header-menu__link" activeClassName="selected" exact="true">
-            {t("menu.biography")}
-          </NavLink>
-          <NavLink to="/exhibitions" className="header-menu__link" activeClassName="selected" exact="true">
-            {t("menu.exhibitions")}
-          </NavLink>
+          <Link className="header-menu__link selected" to="/">
+            Home
+          </Link>
+          <Link className="header-menu__link" to="/">
+            Artworks
+          </Link>
+          <Link className="header-menu__link" to="/">
+            Biography
+          </Link>
+          <Link className="header-menu__link" to="/">
+            Exhibitions
+          </Link>
           <p className="header-menu__link change-side-button" onClick={() => setDark(!isDark)}>
             {buttonTitle}
           </p>
@@ -158,12 +137,12 @@ darkVersion.addEventListener('click', () => {
           <a href="https://facebook.com" target="_blank" rel="noreferrer">
             <img src="../assets/facebook_white.svg" alt="" />
           </a>
-          <a href="https://www.instagram.com/yakushevavictoria/" target="_blank" rel="noreferrer">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
             <img src="../assets/instagram_white.svg" alt="" />
           </a>
-          <p className="header-menu__link lang" onClick={() => setLanguage(language === lang.en ? lang.ru : lang.en)}>
-            {language}
-          </p>
+          <a href="#" className="header-menu__link">
+            RUS
+          </a>
         </div>
       </div>
       <Footer isDark={isDark} />

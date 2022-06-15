@@ -23,16 +23,13 @@
 }
 
 .news-details__title span {
-  color: #ffffff;
   font-weight: bold;
 }
 
 .news-details__description {
+  font-size: 40px;
+  color: var(--white-color);
   margin-bottom: 20px;
-  span {
-    font-size: 40px;
-    color: #ffffff;
-  }
 }
 
 .news-details__button {

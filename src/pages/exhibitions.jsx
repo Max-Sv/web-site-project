@@ -1,12 +1,7 @@
 import React from "react";
 import "../styles/exhibitions.scss";
-import { useTranslation } from "react-i18next";
 
-export const Exhibition = () => {
-  const { t } = useTranslation("common");
-  const exhibitionItems = t("exhibitions", { returnObjects: true }).map(item => {
-    return item;
-  });
+export const Exhibition = ({ exhibitionItems }) => {
   return (
     <div className="exhibition__wrapper wrapper">
       <div className="exhibition-list__wrapper">
@@ -18,11 +13,9 @@ export const Exhibition = () => {
               </span>
             </div>
             <div className="exhibition-item__right">
-              <p className="w700">{item.gallery}</p>
-              <p className="w700">{item.location}</p>
-              <p className="w400">
-                {item.text} (Sculpture: {item.artworkName})
-              </p>
+              <p className="w700">{item.name}</p>
+              <p className="w700">{item.place}</p>
+              <p className="w400">{item.text}</p>
             </div>
           </div>
         ))}

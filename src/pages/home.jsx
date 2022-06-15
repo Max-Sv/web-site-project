@@ -1,14 +1,8 @@
 import "../styles/home.scss";
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { ArtworkItem } from "../components/artwork-item";
 
 export const Home = ({ artworkItems }) => {
-  const { t } = useTranslation("common");
-  const artworks = t("artworks", { returnObjects: true }).map(item => {
-    return item;
-  });
-
   return (
     <>
       <div className="news__wrapper">
@@ -31,7 +25,7 @@ export const Home = ({ artworkItems }) => {
           <span>artworks</span>
         </div>
         <div className="artworks-list__wrapper">
-          {artworks.map(item => (
+          {artworkItems.map(item => (
             <ArtworkItem key={item.id} item={item} />
           ))}
         </div>
