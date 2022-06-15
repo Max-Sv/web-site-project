@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: paths.build,
     filename: '[name].bundle.js',
-    publicPath: '/',
+    publicPath: './',
   },
 
   // Customize the webpack build process
@@ -70,9 +70,9 @@ module.exports = {
         exclude: /(node_modules)/, 
         loader: "babel-loader",   
         options:{
-            presets:["@babel/preset-env", "@babel/preset-react"]  
+          presets:["@babel/preset-env", "@babel/preset-react"]
         }
-    }
+      }
     ],
   },
 

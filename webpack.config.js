@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "[name].bundle.js",
+    publicPath: '/assets'
   },
   entry: {
     main: path.resolve(__dirname, "./src/index.js"),
@@ -33,6 +34,10 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'file-loader?name=/assets/[name].[ext]'
+      }
     ],
   },
   plugins: [
